@@ -23,7 +23,9 @@ function CheckForRaspbian {
 
 # Install app
 function InstallPython {
-    # install python package index
+    # install pyhton 3
+    sudo apt-get -y install python3
+    # install python package index (should be included by default)
     sudo apt-get -y install python3-pip
     # install pygame
     sudo apt-get -y install python3-pygame
