@@ -1,14 +1,16 @@
-"""
-Simple template for python 3 main that can be used to start your application.
+"""Simple template for python 3 main to start your application.
 
 Enables remote debugging if corresponding argument is specified. 
 Afterwards, calls module(s).
+
+Requires the following python packates to be installed:
+ptvsd: for remote debugging.
 """
 
 import pyModule
 
 def remote_debug():
-    """Enable remote debugging using the Visual Studio Debugger engine provided by Microsoft."""
+    """Enable remote debugging using Visual Studio Debugger engine."""
     import ptvsd
 
     # Allow other computers to attach to ptvsd at this IP address and port.
@@ -17,7 +19,7 @@ def remote_debug():
     ptvsd.wait_for_attach()
         
 def main():
-    """Evaluate and execute command line arguments, and then call modules."""
+    """Evaluate command line arguments, then call modules."""
     import argparse
   
     # Check if remote debugging was specified on the command line
@@ -30,8 +32,11 @@ def main():
 
     # Add entry point for your program below
     print("Launching program.")
-    pyModule.greeting()
-    pyModule.greeting("Philipp")
+    pyModule.greet("Developer")
+    pyModule.greet()
+
+    Greeter = pyModule.SimpleClass("Guru")
+    Greeter.say_hello("Developer")
 
 # execute only if run as a script
 main()
