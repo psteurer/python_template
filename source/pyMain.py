@@ -3,7 +3,7 @@
 Enables remote debugging if corresponding argument is specified. 
 Afterwards, calls module(s).
 
-Requires the following python packates to be installed:
+Requires the following python packages to be installed:
 ptvsd: for remote debugging.
 """
 
@@ -38,5 +38,5 @@ def main():
     Greeter = pyModule.SimpleClass("Guru")
     Greeter.say_hello("Developer")
 
-# execute only if run as a script
+# Main executes only if run as a script
 main()

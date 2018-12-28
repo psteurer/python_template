@@ -9,8 +9,12 @@ https://realpython.com/documenting-python-code/
 
 # The blank line above is because of docstrings. Code goes below this line.
 def greet(name: str = "World"):
-    """Greet the caller with its name or the default."""
-
+    """Greet the caller with its name or the default.
+    
+    :param name: Name of the caller, defaults to "World"
+    :param name: str, optional
+    """
+    
     print("Hello " + name)
 
 class SimpleClass:
@@ -18,13 +22,21 @@ class SimpleClass:
 
     greeting_str = "Hello {name}"
 
-    def __init__(self, name):
-        """Constructor"""
- 
+    def __init__(self, name:str):
+        """Define name of class itself within constructor.
+        
+        :param name: Name of the class itself.
+        :type name: str
+        """
+
         self.name = name
 
     def say_hello(self, name: str):
-        """Class method docstrings go here."""
+        """Docstring for method of class goes here.
+        
+        :param name: Name of person to be greeted
+        :type name: str
+        """
 
         print(self.greeting_str.format(name=name))
         print(f"My name is {self.name}.")
