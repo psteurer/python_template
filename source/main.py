@@ -36,8 +36,8 @@ def main():
 
     # Add entry point for your program below
     print("Launching program.")
-    module.greet("Developer")
     module.greet()
+    module.greet("User")
 
     Greeter = module.SimpleClass("Guru")
     Greeter.say_hello("Developer")

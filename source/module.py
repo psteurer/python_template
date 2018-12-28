@@ -40,4 +40,4 @@ class SimpleClass:
         """
 
         print(self.greeting_str.format(name=name))
-        print(f"My name is {self.name}.")
+        print("My name is " + self.name + ".")
