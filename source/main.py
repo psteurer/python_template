@@ -7,7 +7,7 @@ Requires the following python packages to be installed:
 ptvsd: for remote debugging.
 """
 
-import pyModule
+import module
 
 
 def remote_debug():
@@ -26,8 +26,9 @@ def main():
 
     # Check if remote debugging was specified on the command line
     parser = argparse.ArgumentParser(description="Application does something.")
-    parser.add_argument("-d", "--debug", help="allow other computers to attach
-                        for debugging using ptvsd", action="store_true")
+    parser.add_argument("-d", "--debug",
+                        help="enable remote debugging using ptvsd",
+                        action="store_true")
     args = parser.parse_args()
     if args.debug:
         print("Remote debugging enabled. Attach debugger to continue...")
@@ -35,10 +36,10 @@ def main():
 
     # Add entry point for your program below
     print("Launching program.")
-    pyModule.greet("Developer")
-    pyModule.greet()
+    module.greet("Developer")
+    module.greet()
 
-    Greeter = pyModule.SimpleClass("Guru")
+    Greeter = module.SimpleClass("Guru")
     Greeter.say_hello("Developer")
 
 # Main executes only if run as a script
