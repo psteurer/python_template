@@ -10,7 +10,7 @@ function PrintArgumentsHelp {
     echo "  python:     install python"
     echo "  sync:       synchronize workspace files with remote machine"
     echo "  debug:      launch main python process through ptvsd for remote debugging"
-    echo "  sync2debug  sync and then launch debug through ssh from host"
+    echo "  sync2debug: sync and then launch debug through ssh from host"
 }
 
 # Print OS info such as if script is running on an ARM processor and Linux
@@ -34,12 +34,10 @@ function ExitIfNotRunningOnArmAndLinux {
 
 # Install Python 3
 function InstallPython {
-    # install pyhton 3
+    # install python 3
     sudo apt-get -y install python3
     # install python package index (should be included by default)
     sudo apt-get -y install python3-pip
-    # install pygame
-#    sudo apt-get -y install python3-pygame
 }
 
 # Sync local workspace files with Raspberry Pi

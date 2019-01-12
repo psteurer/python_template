@@ -2,7 +2,7 @@
 
 Simple template for python 3 main to start your application.
 
-It supports remote debugging and logging that can be enabled using command line arguments. The source code is documented with docstrings in reStructured text.
+It supports remote debugging and logging. Both can be enabled using command line arguments. The source code is documented with docstrings in reStructured text.
 
 ## Copy sources to Raspberry Pi and run Python program
 
@@ -32,11 +32,11 @@ cd ~/python_template/source
 python3 -m ptvsd --host icpi.local --port 3000 -m main --debug
 ```
 
-Once the program is ready for the remote debugger, you can use Visual Studio Code to attached the debugger to the python program running on your Raspberry Pi. For more information, look at [Remote debugging python with Visual Studio Code](https://code.visualstudio.com/docs/python/debugging#_remote-debugging).
+Once the program is ready for the remote debugger, you can use Visual Studio Code to attached the debugger to the python program running on your Raspberry Pi. For more information, look at [remote debugging python with Visual Studio Code](https://code.visualstudio.com/docs/python/debugging#_remote-debugging).
 
 ## Script for launching commands
 
-The above steps are also available in the script *script/launch.sh* and provides several options through command line arguments.
+The above steps are also available in the script *script/launch.sh* that provides several options through command line arguments.
 
 ## References
 
