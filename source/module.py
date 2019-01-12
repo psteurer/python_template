@@ -7,6 +7,10 @@ More info on docstrings:
 https://realpython.com/documenting-python-code/
 """
 
+import logging
+
+log = logging.getLogger(__name__)
+
 
 def greet(name: str = "World"):
     """Greet the caller with its name or the default.
@@ -30,6 +34,7 @@ class SimpleClass:
         :type name: str
         """
 
+        log.debug("Initializing SimpleClass.")
         self.name = name
 
     def say_hello(self, name: str):
