@@ -4,5 +4,15 @@
     "python.linting.enabled": true,
     "python.linting.pep8Enabled": true,
     "python.linting.pep8Args": ["--max-line-length=85" ],    
-    "python.linting.flake8Enabled": false
+    "python.linting.flake8Enabled": false,
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests/unit",
+        "-p",
+        "test_*.py"
+    ],
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.unittestEnabled": true
 }
