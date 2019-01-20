@@ -38,6 +38,18 @@ Once the program is ready for the remote debugger, you can use Visual Studio Cod
 
 The above steps are also available in the script *script/launch.sh* that provides several options through command line arguments.
 
+## Unit and Integration Tests
+
+The respective test files are located in *tests/unit* and *tests/integration*. If you want to run tests, you can execute one of the following commands:
+
+```bash
+# run the unit tests
+python3 -m unittest discover -s tests/unit
+
+# run the integration tests
+python3 -m unittest discover -s tests/integration
+```
+
 ## References
 
 [1] [Python Tutorial, w3schools](https://www.w3schools.com/python/)

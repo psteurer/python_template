@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Python: Current File (Integrated Terminal)",
             "type": "python",
@@ -44,6 +45,18 @@
             "request": "launch",
             "program": "${workspaceFolder}/source/main.py",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Integration",
+            "type": "python",
+            "request": "launch",
+            "module": "unittest",
+            "console": "integratedTerminal",
+            "args": [
+                "discover",
+                "-s",
+                "${workspaceFolder}/tests/integration"
+            ]
         },
         {
             "name": "Python: Module",
